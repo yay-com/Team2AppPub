@@ -1,14 +1,14 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "pnpm next-build",
-    "beforeDevCommand": "pnpm next-start",
-    "devPath": "http://localhost:3000",
-    "distDir": "../out"
+    "beforeBuildCommand": "yarn next-build",
+    "beforeDevCommand": "yarn next-start",
+    "devPath": "https://beta-team.yay.com",
+    "distDir": "https://beta-team.yay.com"
   },
   "package": {
-    "productName": "tauri-nextjs-template",
-    "version": "0.1.0"
+    "productName": "Team",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.yay.team",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -57,9 +57,11 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "Tauri NextJS App",
-        "width": 1280,
-        "height": 800
+        "title": "Team",
+        "width": 1000,
+        "height": 800,
+        "titleBarStyle": "Transparent",
+        "hiddenTitle": true
       }
     ]
   }
