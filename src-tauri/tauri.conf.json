@@ -4,7 +4,7 @@
     "beforeBuildCommand": "yarn next-build",
     "beforeDevCommand": "yarn next-start",
     "devPath": "http://localhost:3000?desktop_application=true",
-    "distDir": "https://beta-team.yay.com"
+    "distDir": "https://beta-team.yay.com?desktop_application=true"
   },
   "package": {
     "productName": "Team",
