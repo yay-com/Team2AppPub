@@ -3,7 +3,7 @@
   "build": {
     "beforeBuildCommand": "yarn next-build",
     "beforeDevCommand": "yarn next-start",
-    "devPath": "https://beta-team.yay.com",
+    "devPath": "http://localhost:3000?desktop_application=true",
     "distDir": "https://beta-team.yay.com"
   },
   "package": {
@@ -60,7 +60,7 @@
         "title": "Team",
         "width": 1000,
         "height": 800,
-        "titleBarStyle": "Transparent",
+        "titleBarStyle": "Overlay",
         "hiddenTitle": true
       }
     ]
