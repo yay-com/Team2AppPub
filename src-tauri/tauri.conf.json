@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "Team",
-    "version": "0.0.3"
+    "version": "0.0.4"
   },
   "tauri": {
     "allowlist": {
@@ -17,7 +17,7 @@
     "macOSPrivateApi": true,
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Utility",
       "copyright": "",
       "deb": {
         "depends": []
@@ -30,17 +30,9 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.yay.team",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
+      "identifier": "com.yay.beta-team",
+      "longDescription": "Team App for Yay/Telcoswitch Use",
+      "shortDescription": "Internal Team App",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,

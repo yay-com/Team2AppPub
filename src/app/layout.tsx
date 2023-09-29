@@ -3,10 +3,10 @@ export const metadata = {
   description: "By Platon",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout() {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body></body>
     </html>
   )
 }
