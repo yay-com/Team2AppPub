@@ -17,10 +17,10 @@ jobs:
             args: '--target x86_64-apple-darwin'
           - platform: 'macos-latest-silicon'
             args: '--target aarch64-apple-darwin'
-          - platform: 'ubuntu-20.04'
-            args: ''
-          - platform: 'windows-latest'
-            args: ''
+#          - platform: 'ubuntu-20.04'
+#            args: ''
+#          - platform: 'windows-latest'
+#            args: ''
 
     runs-on: ${{ matrix.settings.platform }}
 
