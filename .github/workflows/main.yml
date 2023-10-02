@@ -13,9 +13,9 @@ jobs:
       fail-fast: false
       matrix:
         settings:
-          - platform: 'macos-latest-intel'
+          - platform: 'macos-latest'
             args: '--target x86_64-apple-darwin'
-          - platform: 'macos-latest-silicon'
+          - platform: 'macos-latest'
             args: '--target aarch64-apple-darwin'
 #          - platform: 'ubuntu-20.04'
 #            args: ''
@@ -54,8 +54,8 @@ jobs:
         # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
         run: yarn install # Change this to npm, yarn or pnpm.
 
-      - name: Install Apple Silicon Rust Lib (MacOS Silicon Only)
-        if: matrix.platform == 'macos-latest-silicon'
+      - name: Install Apple Silicon Rust Compiler (MacOS Silicon Only)
+        if: matrix.settings.args == '--target aarch64-apple-darwin'
         run: rustup target add aarch64-apple-darwin
 
       - name: Build the app
