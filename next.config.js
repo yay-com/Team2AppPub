@@ -8,4 +8,4 @@ const nextConfig = {
   output: "export",
 }
 
-export default nextConfig
+module.exports = nextConfig
