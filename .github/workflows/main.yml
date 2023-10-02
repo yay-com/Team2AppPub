@@ -20,7 +20,7 @@ jobs:
           - platform: 'ubuntu-20.04'
           - platform: 'windows-latest'
 
-    runs-on: ${{ matrix.platform }}
+    runs-on: ${{ matrix.settings.platform }}
 
     steps:
       - name: Checkout repository
