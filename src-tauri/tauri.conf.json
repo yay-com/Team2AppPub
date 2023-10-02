@@ -3,12 +3,12 @@
   "build": {
     "beforeBuildCommand": "yarn next-build",
     "beforeDevCommand": "yarn next-start",
-    "devPath": "http://localhost:3000?desktop_application=true",
+    "devPath": "https://beta-team.yay.com?desktop_application=true",
     "distDir": "https://beta-team.yay.com?desktop_application=true"
   },
   "package": {
     "productName": "Team",
-    "version": "0.0.3"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -46,7 +46,7 @@
     "updater": {
       "active": true,
       "endpoints": [
-        "https://beta-team.yay.com/api/desktop_app/releases/compare?target={{target}}&archetype={{arch}}&current_version={{current_version}}"
+        "https://beta-team.yay.com/api/desktop_app/releases/latest"
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRDMDBEODU5NzFENTc4MzMKUldRemVOVnhXZGdBVEgrZ293UStZUkEvbG5Wb0ZheDh6YjFvQ1luQlE4TFlqVTRMVnFxWFlqK2wK"
