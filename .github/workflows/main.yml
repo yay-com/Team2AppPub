@@ -13,9 +13,9 @@ jobs:
       fail-fast: false
       matrix:
         settings:
-          - platform: 'macos-latest'
+          - platform: 'macos-latest-intel'
             args: '--target x86_64-apple-darwin'
-          - platform: 'macos-latest'
+          - platform: 'macos-latest-silicon'
             args: '--target aarch64-apple-darwin'
           - platform: 'ubuntu-20.04'
             args: ''
@@ -50,10 +50,15 @@ jobs:
           cache: 'yarn' # Set this to npm, yarn or pnpm.
 
       - name: Install frontend dependencies
+        if: matrix.platform == 'ubuntu-20.04'
         # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
         run: yarn install # Change this to npm, yarn or pnpm.
 
+      - name: Build frontend (MacOS Silicon Only)
+        run: rustup target add aarch64-apple-darwin
+
       - name: Build the app
+        if: matrix.platform == 'macos-latest-silicon'
         uses: tauri-apps/tauri-action@dev
 
         env:
