@@ -3,12 +3,12 @@
   "build": {
     "beforeBuildCommand": "yarn next-build",
     "beforeDevCommand": "yarn next-start",
-    "devPath": "http://localhost:3000?desktop_application=true",
+    "devPath": "https://beta-team.yay.com?desktop_application=true",
     "distDir": "https://beta-team.yay.com?desktop_application=true"
   },
   "package": {
     "productName": "Team",
-    "version": "0.1.0"
+    "version": "0.0.5"
   },
   "tauri": {
     "allowlist": {
