@@ -17,10 +17,10 @@ jobs:
             args: '--target x86_64-apple-darwin'
           - platform: 'macos-latest'
             args: '--target aarch64-apple-darwin'
-    #          - platform: 'ubuntu-20.04'
-    #            args: ''
-    #          - platform: 'windows-latest'
-    #            args: ''
+#          - platform: 'ubuntu-20.04'
+#            args: ''
+#          - platform: 'windows-latest'
+#            args: ''
 
     runs-on: ${{ matrix.settings.platform }}
 
@@ -43,10 +43,9 @@ jobs:
         with:
           workspaces: './src-tauri -> target'
 
-      - name: Install frontend dependencies
-        if: matrix.platform == 'ubuntu-20.04'
-        # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
-        run: yarn install # Change this to npm, yarn or pnpm.
+      - name: Install Apple Silicon Rust Compiler (MacOS Silicon Only)
+        if: matrix.settings.args == '--target aarch64-apple-darwin'
+        run: rustup target add aarch64-apple-darwin
 
       - name: Sync node version and setup cache
         uses: actions/setup-node@v3
@@ -54,9 +53,10 @@ jobs:
           node-version: 'lts/*'
           cache: 'yarn' # Set this to npm, yarn or pnpm.
 
-      - name: Install Apple Silicon Rust Compiler (MacOS Silicon Only)
-        if: matrix.settings.args == '--target aarch64-apple-darwin'
-        run: rustup target add aarch64-apple-darwin
+      - name: Install frontend dependencies
+        if: matrix.platform == 'ubuntu-20.04'
+        # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
+        run: yarn install # Change this to npm, yarn or pnpm.
 
       - name: Build the app
         uses: tauri-apps/tauri-action@dev
