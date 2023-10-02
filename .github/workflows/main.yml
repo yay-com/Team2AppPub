@@ -54,11 +54,11 @@ jobs:
         # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
         run: yarn install # Change this to npm, yarn or pnpm.
 
-      - name: Build frontend (MacOS Silicon Only)
+      - name: Install Apple Silicon Rust Lib (MacOS Silicon Only)
+        if: matrix.platform == 'macos-latest-silicon'
         run: rustup target add aarch64-apple-darwin
 
       - name: Build the app
-        if: matrix.platform == 'macos-latest-silicon'
         uses: tauri-apps/tauri-action@dev
 
         env:
