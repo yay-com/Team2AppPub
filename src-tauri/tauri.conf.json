@@ -1,0 +1,68 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "withGlobalTauri": true,
+    "beforeBuildCommand": "yarn next-build",
+    "beforeDevCommand": "yarn next-start",
+    "devPath": "http://localhost:3000?desktop_application=true",
+    "distDir": "https://beta-team.yay.com?desktop_application=true"
+  },
+  "package": {
+    "productName": "Team",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "macOSPrivateApi": true,
+    "bundle": {
+      "active": true,
+      "category": "Utility",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.yay.beta-team",
+      "longDescription": "Team App for Yay/Telcoswitch Use",
+      "shortDescription": "Internal Team App",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "dialog": false,
+      "active": true,
+      "endpoints": [
+        "https://beta-team.yay.com/api/desktop_app/releases/latest"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRDMDBEODU5NzFENTc4MzMKUldRemVOVnhXZGdBVEgrZ293UStZUkEvbG5Wb0ZheDh6YjFvQ1luQlE4TFlqVTRMVnFxWFlqK2wK"
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "Team",
+        "width": 1000,
+        "height": 800,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "transparent": true
+      }
+    ]
+  }
+}
