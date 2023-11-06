@@ -14,6 +14,9 @@ dependencies:
   next:
     specifier: ^13.5.3
     version: 13.5.3(react-dom@18.2.0)(react@18.2.0)
+  prettier:
+    specifier: ^3.0.3
+    version: 3.0.3
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -97,9 +100,6 @@ devDependencies:
   postcss-nesting:
     specifier: ^12.0.1
     version: 12.0.1(postcss@8.4.30)
-  prettier:
-    specifier: ^3.0.3
-    version: 3.0.3
   prettier-plugin-tailwindcss:
     specifier: ^0.5.4
     version: 0.5.4(prettier@3.0.3)
@@ -179,8 +179,8 @@ packages:
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
-  /@eslint/eslintrc@2.1.2:
-    resolution: {integrity: sha512-+wvgpDsrB1YqAMdEUCcnTlpfVBH7Vqn6A/NT3D8WVXFIaKMlErPIZT3oCIAVCOtarRpMtelZLqJeU3t7WY6X6g==}
+  /@eslint/eslintrc@2.1.3:
+    resolution: {integrity: sha512-yZzuIG+jnVu6hNSzFEN07e8BxF3uAzYtQb6uDkaYZLo6oYZDCq454c5kB8zxnzfCYyP4MIuyBn10L0DqwujTmA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
@@ -1947,7 +1947,7 @@ packages:
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.50.0)
       '@eslint-community/regexpp': 4.9.0
-      '@eslint/eslintrc': 2.1.2
+      '@eslint/eslintrc': 2.1.3
       '@eslint/js': 8.50.0
       '@humanwhocodes/config-array': 0.11.11
       '@humanwhocodes/module-importer': 1.0.1
@@ -3628,7 +3628,6 @@ packages:
     resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: true
 
   /pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
